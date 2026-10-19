@@ -34,7 +34,7 @@
         <li>All image processing (the Quick filter and the AI enhancement) runs <strong>locally on your device</strong>, on your CPU or GPU.</li>
         <li><strong>No images, page content, URLs or browsing history are uploaded</strong> to us or to anyone else.</li>
         <li>There is <strong>no analytics, no tracking, no advertising and no account</strong>.</li>
-        <li>Only if you enter a Pro license key, the extension sends <strong>that key and a random install ID</strong> to our license server to verify it. Nothing else.</li>
+        <li>During early access the extension contacts no server we operate. When Pro launches, and only if you enter a Pro license key, it will send <strong>that key and a random install ID</strong> to our license server to verify it. Nothing else.</li>
         <li>We do <strong>not sell or share</strong> any data.</li>
       </ul>
     </div>
@@ -54,11 +54,11 @@
     <ul>
       <li><strong>Requests for comic images and chapter pages</strong> go to the website you are reading and its image servers, exactly as when you view the page normally. Some image servers only return an image if the request names the page it is shown on (the "Referer" header). For this, the extension adds a temporary rule that applies only to image requests from its own reader tab, sets the Referer to the page you were already viewing, and is removed when the tab closes. It does not change requests made by any other tab or website.</li>
       <li>The AI models and all program code are <strong>bundled inside the extension</strong>. Nothing is downloaded from our servers, and no remote code is used.</li>
-      <li><strong>License validation</strong> (only if you use PanelSharp Pro), described below. This is the only request the extension sends to a server we operate.</li>
+      <li><strong>License validation</strong> (only once Pro launches, and only if you use PanelSharp Pro), described below. This is the only request the extension will send to a server we operate; the current early-access version sends none.</li>
     </ul>
 
     <h2 id="license">PanelSharp Pro and license validation</h2>
-    <p>If you never enter a license key, the extension makes no payment- or license-related requests at all.</p>
+    <p>This section applies when PanelSharp Pro launches in a later update. The current early-access version has no license feature and makes no payment- or license-related requests. After Pro launches, if you never enter a license key, the extension still makes no such requests.</p>
     <p>When you enter a Pro license key and click Activate, and later from time to time to re-check it, the extension sends the following to our license server (a Cloudflare Worker that we operate):</p>
     <ul>
       <li>your <strong>license key</strong>, and</li>
