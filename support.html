@@ -1,0 +1,91 @@
+<!doctype html>
+<!-- Placeholders (checkout link, Chrome Web Store link, support email, seller name, dates) live in config.js. Edit that file only. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support · PanelSharp</title>
+<meta name="description" content="Get help with PanelSharp: activation, lost license keys, refunds and common issues.">
+<link rel="icon" type="image/png" href="assets/favicon-32.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/icon-128.png" alt="" width="28" height="28">PanelSharp</a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-sm" href="index.html#features">Features</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="wrap narrow">
+    <h1>Support</h1>
+    <p class="meta">We are a one-person team and usually reply within 1 to 2 business days.</p>
+
+    <div class="box accent">
+      <strong>Email us:</strong> <a href="mailto:SUPPORT_EMAIL" data-cfg-mailto="SUPPORT_EMAIL" data-subject="PanelSharp support">SUPPORT_EMAIL</a><br>
+      <span class="small">For license questions, include your order number or the email address you used at checkout. Never send your card details.</span>
+    </div>
+
+    <h2>Common issues</h2>
+
+    <h3>"Activation limit reached"</h3>
+    <p>Each Pro license can be active on up to 3 devices or browser installs. Reinstalling the extension or using a new Chrome profile also uses a slot. To free one:</p>
+    <ol>
+      <li>On a device you no longer use, open the PanelSharp reader, go to <span class="path"><span>Settings</span>&rarr;<span>PanelSharp Pro</span></span> and click <strong>Deactivate</strong>, then activate on the new device.</li>
+      <li>If you no longer have access to the old device (or already uninstalled the extension there), <a href="mailto:SUPPORT_EMAIL" data-cfg-mailto="SUPPORT_EMAIL" data-subject="PanelSharp activation reset" data-keep-text>email us</a> with your order number and we will reset your activations.</li>
+    </ol>
+
+    <h3>I lost my license key</h3>
+    <p>Your key is in the <strong>receipt email from Creem</strong> sent right after purchase (search your inbox, including spam, for "Creem" or "PanelSharp"). You can also find it in Creem's <strong>customer portal</strong>, linked from that email, by signing in with the email address you used at checkout. Still can't find it? <a href="mailto:SUPPORT_EMAIL" data-cfg-mailto="SUPPORT_EMAIL" data-subject="PanelSharp lost license key" data-keep-text>Email us</a> with the checkout email address.</p>
+
+    <h3>"Invalid license key"</h3>
+    <p>Copy the whole key from the email without extra spaces. If the order was refunded, the key no longer works. Contact us if you believe it should be valid.</p>
+
+    <h3>License check failed / offline</h3>
+    <p>Activation needs an internet connection once. After that, Pro keeps working offline and re-checks the license occasionally when you are online. If a check fails because of a network or firewall issue, try again later or <a href="mailto:SUPPORT_EMAIL" data-cfg-mailto="SUPPORT_EMAIL" data-subject="PanelSharp license check" data-keep-text>email us</a>.</p>
+
+    <h3>The AI modes are slow</h3>
+    <p>The AI uses your GPU through WebGPU. Make sure Chrome is up to date and hardware acceleration is on (<code>chrome://settings/system</code>). Without a supported GPU, the AI runs on the CPU, which is much slower. "AI on text regions only" and the Quick filter are faster options.</p>
+
+    <h3>The button does not appear on a page</h3>
+    <p>PanelSharp works with pages that show comic pages as regular images. Pages that draw on a canvas, scramble images, or use protected viewers are not supported. Try the toolbar icon instead, or test with our <a href="demo/index.html">demo page</a>.</p>
+
+    <h3>Refunds</h3>
+    <p>Email us within 14 days of purchase for a full refund. See the <a href="terms.html#refunds">refund policy</a>.</p>
+
+    <h2>More</h2>
+    <ul>
+      <li><a href="thanks.html">How to activate Pro</a></li>
+      <li><a href="privacy.html">Privacy policy</a></li>
+      <li><a href="terms.html">Terms of use</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="index.html"><img src="assets/icon-128.png" alt="" width="28" height="28">PanelSharp</a>
+      <p>&copy; <span data-year>2026</span> <span data-cfg-text="SELLER_NAME">SELLER_NAME</span>. Not affiliated with Google or any publisher.</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="demo/index.html">Demo</a></li>
+      <li><a href="CWS_URL" data-cfg-href="CWS_URL">Chrome Web Store</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms &amp; refunds</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="thanks.html">Activate Pro</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="config.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

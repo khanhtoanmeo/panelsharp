@@ -1,0 +1,217 @@
+<!doctype html>
+<!-- Placeholders (checkout link, Chrome Web Store link, support email, seller name, dates) live in config.js. Edit that file only. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PanelSharp: sharper comic pages, on your device</title>
+<meta name="description" content="PanelSharp is a Chrome extension that sharpens blurry lettering and line art in comic pages with on-device, non-generative AI upscaling. Free to use; Pro is a one-time $3.99.">
+<link rel="icon" type="image/png" href="assets/favicon-32.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/icon-128.png" alt="" width="28" height="28">PanelSharp</a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-sm" href="#features">Features</a>
+      <a class="hide-sm" href="#privacy">Privacy</a>
+      <a href="#pricing">Pricing</a>
+      <a class="hide-sm" href="#faq">FAQ</a>
+      <a class="btn btn-primary btn-sm" href="CWS_URL" data-cfg-href="CWS_URL">Add to Chrome</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Chrome extension</p>
+        <h1>Blurry comic lettering, made crisp on your own device</h1>
+        <p class="lead">PanelSharp opens the comic you are reading in a clean reader tab and sharpens small, compressed text and line art with AI upscaling that runs entirely in your browser. Nothing is uploaded.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="CWS_URL" data-cfg-href="CWS_URL">Add to Chrome, it's free</a>
+          <a class="btn btn-ghost" href="demo/index.html">Try the demo</a>
+        </div>
+        <p class="fine">Free: Quick filter + 30 AI pages a day. Pro: unlimited AI for a one-time $3.99.</p>
+      </div>
+      <img class="hero-shot" src="assets/02-reader-tab.png" width="1280" height="800" alt="The PanelSharp reader tab showing a sharpened public-domain comic page (Blue Bolt #5, 1940)">
+    </div>
+  </section>
+
+  <section class="alt" id="before-after">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Before / after</p>
+        <h2>The same web image, enhanced locally</h2>
+        <p>Drag the slider to compare. Both sides come from the same low-resolution 800&nbsp;px JPEG, shown at the same zoom.</p>
+      </div>
+      <div class="compare">
+        <div class="pair">
+          <figure class="before-fig">
+            <img src="assets/before.png" width="568" height="426" alt="Original: soft, blocky lettering in a low-resolution comic scan">
+            <span class="tag before">Original</span>
+          </figure>
+          <figure class="after-fig">
+            <img src="assets/after.png" width="568" height="426" alt="PanelSharp AI Sharp: the same lettering, clean and crisp">
+            <span class="tag after">PanelSharp AI</span>
+          </figure>
+        </div>
+        <div class="divider" aria-hidden="true"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Comparison slider: drag to reveal original or enhanced image">
+      </div>
+      <p class="caption">Public-domain comic: Blue Bolt #5 (1940). AI: waifu2x model running locally with WebGPU.</p>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Features</p>
+        <h2>Built for reading, not for waiting</h2>
+        <p>Open a chapter, click "Read sharpened", and the pages appear in a distraction-free reader.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card"><div class="icon">AI</div><h3>AI Fast &amp; AI Sharp</h3><p>2&times; AI upscaling removes JPEG noise and rebuilds thin lines and small lettering.</p></div>
+        <div class="card"><div class="icon">T</div><h3>Text regions only</h3><p>By default the AI runs only on speech bubbles and captions, so it is faster and the artwork keeps its original look.</p></div>
+        <div class="card"><div class="icon">Q</div><h3>Quick filter</h3><p>An instant, non-AI 2&times; upscale with gentle de-noise and sharpening that works on any computer.</p></div>
+        <div class="card"><div class="icon">&#8595;</div><h3>Visible pages first</h3><p>The page on screen is enhanced first, then the next pages as you scroll.</p></div>
+        <div class="card"><div class="icon">&#8644;</div><h3>Instant compare</h3><p>Hold Space (or click "Show original") to compare with the original image at any time.</p></div>
+        <div class="card"><div class="icon">&#9776;</div><h3>Comfortable reader</h3><p>Adjustable page width, previous / next chapter buttons, and per-mode caching so switching back is instant.</p></div>
+      </div>
+      <div class="grid grid-2 shots">
+        <img src="assets/04-modes.png" width="1280" height="800" loading="lazy" alt="Reader controls: Original, Quick filter, AI Fast and AI Sharp modes">
+        <img src="assets/01-comic-page-button.png" width="1280" height="800" loading="lazy" alt="The Read sharpened button on a comic page">
+      </div>
+      <p class="caption">Works with comics, manga, manhwa and vertical web comics that show their pages as regular images: comics you own, public-domain collections, and web comics you can legally access.</p>
+    </div>
+  </section>
+
+  <section class="alt" id="privacy">
+    <div class="wrap privacy-grid">
+      <div>
+        <p class="eyebrow">Privacy</p>
+        <h2 style="font-size:clamp(26px,4vw,36px);margin:0 0 12px">100% on-device</h2>
+        <p class="muted">Every pixel is processed on your own CPU or GPU. PanelSharp has no image server, because it does not need one.</p>
+        <ul class="checklist">
+          <li>Images, page addresses and browsing data are never uploaded</li>
+          <li>No account, no analytics, no tracking, no ads</li>
+          <li>AI models and all code ship inside the extension; no remote code</li>
+          <li>Non-generative: it only upscales and cleans up what is already on the page. No prompts, nothing invented</li>
+          <li>Pro license check sends only your license key and a random install ID, nothing else</li>
+        </ul>
+        <p><a href="privacy.html">Read the privacy policy</a></p>
+      </div>
+      <img src="assets/05-private-on-device.png" width="1280" height="800" loading="lazy" alt="Diagram: comic images are enhanced on your device, nothing is uploaded" style="border-radius:var(--radius);border:1px solid var(--line)">
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="section-head" style="margin-left:auto;margin-right:auto;text-align:center">
+        <p class="eyebrow">Pricing</p>
+        <h2>Free to use. Pay once if you want more.</h2>
+        <p>No subscription. No account.</p>
+      </div>
+      <div class="pricing">
+        <div class="plan">
+          <h3>Free</h3>
+          <p class="price">$0</p>
+          <ul>
+            <li>Quick filter, unlimited</li>
+            <li>30 AI-enhanced pages per day</li>
+            <li>AI Fast and AI Sharp modes</li>
+            <li>All reader features</li>
+            <li>100% on-device</li>
+          </ul>
+          <a class="btn btn-ghost btn-block" href="CWS_URL" data-cfg-href="CWS_URL">Add to Chrome</a>
+        </div>
+        <div class="plan pro">
+          <span class="badge">ONE-TIME</span>
+          <h3>PanelSharp Pro</h3>
+          <p class="price">$3.99 <small>once, not monthly</small></p>
+          <ul>
+            <li>Everything in Free</li>
+            <li><strong>Unlimited</strong> AI pages</li>
+            <li>Lifetime license, all future updates</li>
+            <li>Use on up to 3 devices / browser installs</li>
+            <li>14-day refund, no questions asked</li>
+          </ul>
+          <a class="btn btn-primary btn-block" href="CHECKOUT_URL" data-cfg-href="CHECKOUT_URL">Buy Pro, $3.99</a>
+          <p class="note">Your license key arrives by email right after purchase. <a href="thanks.html">How to activate</a></p>
+        </div>
+      </div>
+      <p class="seller-note">PanelSharp Pro is sold by <span data-cfg-text="SELLER_NAME">SELLER_NAME</span>, not by Google. Payment is processed by Creem, our merchant of record, which handles checkout, sales tax/VAT and invoices. Prices in USD; local taxes may apply. See the <a href="terms.html">terms and refund policy</a>.</p>
+    </div>
+  </section>
+
+  <section class="alt" id="faq">
+    <div class="wrap faq">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Questions</h2>
+      </div>
+      <details>
+        <summary>Is this generative AI?</summary>
+        <p>No. PanelSharp uses waifu2x, an open-source image upscaling and de-noising model. It works only with the pixels that are already in the image: there are no prompts, and it does not draw or invent new content.</p>
+      </details>
+      <details>
+        <summary>Are my images uploaded anywhere?</summary>
+        <p>No. All enhancement runs locally in your browser on your CPU or GPU. The only network request PanelSharp makes to us is the optional Pro license check, which sends your license key and a random install ID. See the <a href="privacy.html">privacy policy</a>.</p>
+      </details>
+      <details>
+        <summary>Which comics does it work with?</summary>
+        <p>Comic pages shown as regular images on a web page: web comics, public-domain comic archives, and comics you own or legally access in your browser. Pages that draw on a canvas, scramble images or use protected viewers are not supported. PanelSharp only enhances images already displayed in your browser; it does not host, download, save or provide access to any content.</p>
+      </details>
+      <details>
+        <summary>What do I need to run the AI modes?</summary>
+        <p>A current version of Chrome on Windows, macOS or ChromeOS. The AI uses WebGPU; without a supported GPU it falls back to the CPU, which is slower. The Quick filter works on any computer.</p>
+      </details>
+      <details>
+        <summary>What counts as an "AI page" on the free plan?</summary>
+        <p>Each comic page enhanced with an AI mode counts once per day. The counter is kept on your device and resets daily. The Quick filter is always unlimited.</p>
+      </details>
+      <details>
+        <summary>How do I activate Pro?</summary>
+        <p>After checkout you receive a license key by email (it is also shown on the order confirmation page). Open the PanelSharp reader, go to Settings &rarr; PanelSharp Pro, paste the key and click Activate. <a href="thanks.html">Step-by-step guide</a>.</p>
+      </details>
+      <details>
+        <summary>Can I use Pro on more than one computer?</summary>
+        <p>Yes, one license activates on up to 3 devices or browser installs. You can deactivate an old device in the extension to free a slot.</p>
+      </details>
+      <details>
+        <summary>Can I get a refund?</summary>
+        <p>Yes. Email us within 14 days of purchase for a full refund. Details are in the <a href="terms.html#refunds">terms</a>.</p>
+      </details>
+      <details>
+        <summary>Can I try it before installing?</summary>
+        <p>Yes: install the free version and open our <a href="demo/index.html">demo comic page</a> (public-domain comics, deliberately low quality), then click "Read sharpened".</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="index.html"><img src="assets/icon-128.png" alt="" width="28" height="28">PanelSharp</a>
+      <p>&copy; <span data-year>2026</span> <span data-cfg-text="SELLER_NAME">SELLER_NAME</span>. Not affiliated with Google or any publisher.</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="demo/index.html">Demo</a></li>
+      <li><a href="CWS_URL" data-cfg-href="CWS_URL">Chrome Web Store</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms &amp; refunds</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="thanks.html">Activate Pro</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="config.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

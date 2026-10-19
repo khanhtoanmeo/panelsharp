@@ -1,0 +1,123 @@
+<!doctype html>
+<!-- Placeholders (checkout link, Chrome Web Store link, support email, seller name, dates) live in config.js. Edit that file only. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · PanelSharp</title>
+<meta name="description" content="PanelSharp processes comic images locally on your device. No images, URLs or browsing data are uploaded, and there is no analytics.">
+<link rel="icon" type="image/png" href="assets/favicon-32.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/icon-128.png" alt="" width="28" height="28">PanelSharp</a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-sm" href="index.html#features">Features</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="wrap narrow">
+    <h1>Privacy Policy</h1>
+    <div class="meta">Effective date: <span data-cfg-text="EFFECTIVE_DATE">EFFECTIVE_DATE</span> · Applies to the PanelSharp browser extension for Google Chrome and compatible Chromium browsers, and to this website.</div>
+
+    <p>PanelSharp sharpens comic page images in your browser. It is built so that your images and your browsing stay on your own device. This policy explains, in plain language, what the extension handles and what it does not. PanelSharp is provided by <span data-cfg-text="SELLER_NAME">SELLER_NAME</span> ("we", "us").</p>
+
+    <div class="box accent">
+      <strong>Summary</strong>
+      <ul>
+        <li>All image processing (the Quick filter and the AI enhancement) runs <strong>locally on your device</strong>, on your CPU or GPU.</li>
+        <li><strong>No images, page content, URLs or browsing history are uploaded</strong> to us or to anyone else.</li>
+        <li>There is <strong>no analytics, no tracking, no advertising and no account</strong>.</li>
+        <li>Only if you enter a Pro license key, the extension sends <strong>that key and a random install ID</strong> to our license server to verify it. Nothing else.</li>
+        <li>We do <strong>not sell or share</strong> any data.</li>
+      </ul>
+    </div>
+
+    <h2>What the extension handles, and why</h2>
+
+    <h3>Web page content (processed locally, never transmitted)</h3>
+    <p>When you open a comic page and click the PanelSharp button (or the toolbar icon), the extension looks at the current page to find the comic page images. It reads only what it needs for this: the image addresses on the page and the links to the previous and next chapter.</p>
+    <p>It then opens a reader tab inside the extension and loads those same images, from the same servers your browser already loaded them from, so that it can enhance them on your device. When you use "Previous / Next chapter", it loads that chapter's page from the website in the same way your browser would.</p>
+    <p>The enhanced images are kept only in the memory of the reader tab. They are discarded when you change chapter or close the tab. The extension never saves images to disk and has no download feature.</p>
+    <p>The list of image addresses for the chapter you opened is passed from the page to the reader tab using Chrome's session storage (<code>chrome.storage.session</code>). Chrome holds this in memory only, and it is cleared when the browser closes.</p>
+
+    <h3>Settings and local counters (stored on your device)</h3>
+    <p>Your reader preferences (for example the enhancement mode, AI preset, filter strength and page width) are saved with <code>chrome.storage.local</code>, on your device only. The daily counter of free AI pages (a date and a number) is stored the same way. None of this is sent anywhere. Removing the extension removes it.</p>
+
+    <h3>Network requests the extension makes</h3>
+    <ul>
+      <li><strong>Requests for comic images and chapter pages</strong> go to the website you are reading and its image servers, exactly as when you view the page normally. Some image servers only return an image if the request names the page it is shown on (the "Referer" header). For this, the extension adds a temporary rule that applies only to image requests from its own reader tab, sets the Referer to the page you were already viewing, and is removed when the tab closes. It does not change requests made by any other tab or website.</li>
+      <li>The AI models and all program code are <strong>bundled inside the extension</strong>. Nothing is downloaded from our servers, and no remote code is used.</li>
+      <li><strong>License validation</strong> (only if you use PanelSharp Pro), described below. This is the only request the extension sends to a server we operate.</li>
+    </ul>
+
+    <h2 id="license">PanelSharp Pro and license validation</h2>
+    <p>If you never enter a license key, the extension makes no payment- or license-related requests at all.</p>
+    <p>When you enter a Pro license key and click Activate, and later from time to time to re-check it, the extension sends the following to our license server (a Cloudflare Worker that we operate):</p>
+    <ul>
+      <li>your <strong>license key</strong>, and</li>
+      <li>a <strong>random install ID</strong> (the "instance name"), generated by the extension when you activate. It identifies the browser install so that the license can be limited to 3 devices and so that you can deactivate it later. It is not derived from your hardware, account or identity.</li>
+    </ul>
+    <p>Our license server relays these two values to <strong>Creem</strong>, the merchant of record that issued the key, to activate, validate or deactivate the license, and returns the result (for example "active" or "activation limit reached") to the extension.</p>
+    <p>As with any internet request, your <strong>IP address</strong> is visible to our license server (and to Cloudflare, which hosts it) when the request is made. We do not use it to identify or track you, and we do not keep it beyond what our hosting provider records in short-lived operational logs.</p>
+    <p><strong>Nothing else is sent</strong>: no images, no page addresses, no browsing data, no settings.</p>
+    <p>The license key, its activation status and the date it was last checked are stored with <code>chrome.storage.local</code> on your device so that Pro keeps working offline.</p>
+
+    <h2>Purchases</h2>
+    <p>PanelSharp Pro is sold through <strong>Creem</strong>, which acts as the merchant of record. Checkout happens on Creem's website, and your payment details, billing address and email are collected and processed by Creem under its own privacy policy: <a href="https://www.creem.io/privacy" rel="noopener">creem.io/privacy</a>. We never see or store your card details.</p>
+    <p>Creem shares your order details with us as the seller (for example your email address, order number and license key) so that we can provide support and refunds. We use this only for that purpose.</p>
+
+    <h2>This website</h2>
+    <p>This website is a set of static pages. It uses no cookies, no analytics, no trackers and no third-party fonts or scripts. Like any web host, the hosting provider (GitHub Pages) may process your IP address to deliver the pages and keep security logs.</p>
+
+    <h2>What we do not do</h2>
+    <ul>
+      <li>We do not collect health, financial, location or personal communications data, or your browsing history.</li>
+      <li>We do not use or transfer data for any purpose unrelated to the extension's single purpose (enhancing comic page images for reading) and license verification.</li>
+      <li>We do not sell data, use it for advertising, or use it to determine creditworthiness or for lending.</li>
+      <li>We do not use remote code.</li>
+    </ul>
+
+    <h2>Your choices</h2>
+    <p>You can use PanelSharp without ever entering a license key, in which case nothing is sent to our server. You can deactivate your license in the extension, or remove the extension to delete all locally stored data. To ask about the order data held by Creem or by us, email us at the address below.</p>
+
+    <h2>Children</h2>
+    <p>PanelSharp does not knowingly collect any personal information from anyone, including children.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If the way the extension handles data changes, we will update this policy, change the effective date above, and, where required, ask for your consent in the extension before the change takes effect.</p>
+
+    <h2>Contact</h2>
+    <p>Seller: <strong data-cfg-text="SELLER_NAME">SELLER_NAME</strong><br>
+    Privacy questions: <a href="mailto:SUPPORT_EMAIL" data-cfg-mailto="SUPPORT_EMAIL" data-subject="PanelSharp privacy">SUPPORT_EMAIL</a></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="index.html"><img src="assets/icon-128.png" alt="" width="28" height="28">PanelSharp</a>
+      <p>&copy; <span data-year>2026</span> <span data-cfg-text="SELLER_NAME">SELLER_NAME</span>. Not affiliated with Google or any publisher.</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="demo/index.html">Demo</a></li>
+      <li><a href="CWS_URL" data-cfg-href="CWS_URL">Chrome Web Store</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms &amp; refunds</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="thanks.html">Activate Pro</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="config.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
